@@ -4,15 +4,20 @@
   <meta charset="utf-8">
   <title>Caesar Cipher</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Song+Myung" rel="stylesheet">
 </head>
 <body>
   <div id="root"></div>
-  <h1>BIENVENIDOS</h1>
-  <input type="text" placeholder="Ingrese Texto" id='texto'/>
-  <input type="text" placeholder="Ingrese llave" maxlength="2"  id='llave'/>
+  <h1>BIENVENIDOS A CIFRADO CESAR</h1>
+  <h2>MENSAJE A CIFRAR</h2>
+  <textarea placeholder="Ingrese Texto" id='texto'></textarea></br></br>
+  <!--input type="text" placeholder="Ingrese Texto" id='texto'/> </br></br></br-->
+  <label>INGRESE LLAVE</label>
+  <textarea placeholder="Ingrese Llave" maxlength="2"  id='llave'></textarea></br></br>
+  <!--input type="text" placeholder="Ingrese llave" maxlength="2"  id='llave'/-->
   <button type="button" id="botonE">Encriptar</button>
   <button type="button" id="botonD">Desencriptar</button>
-  <h1>RESULTADO</h1>
+  <h3>RESULTADO</h3>
   <div id="answer">
   </div>
   <script src="cipher.js"></script>
