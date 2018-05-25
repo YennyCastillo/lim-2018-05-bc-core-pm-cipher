@@ -9,9 +9,10 @@ buttonD.addEventListener("click" ,window.cipher.decode);
 
 
 let text= document.getElementById("texto");
-text.addEventListener("textarea" , ()=>
-{});
+text.addEventListener("input" , ()=>
+{ console.log(text.value);
+})
 
 let clave= document.getElementById("llave");
-clave.addEventListener("textarea" , ()=>
+clave.addEventListener("input" , ()=>
 {});

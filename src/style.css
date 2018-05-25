@@ -15,11 +15,13 @@ label {
 }
 #llave {
   border-radius: 10px;
+  font-weight: bold;
 }
 #texto {
   width: 500px;
   height: 150px;
   border-radius: 20px;
+  font-weight: bold;
 }
 
 #answer {
