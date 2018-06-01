@@ -1,8 +1,8 @@
 const encriptar = (string, offset) => {
-  let answerE="";
+  let answerE = "";
   for (let i=0 ; i < string.length ; i++)
   {
-    let stringE= string.toUpperCase().charCodeAt(i);
+    let stringE = string.toUpperCase().charCodeAt(i);
     answerE += String.fromCharCode((stringE-65+offset) % 26 +65);
   }
   return answerE;
