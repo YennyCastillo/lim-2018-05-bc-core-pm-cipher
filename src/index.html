@@ -4,21 +4,39 @@
   <meta charset="utf-8">
   <title>Caesar Cipher</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css?family=Song+Myung" rel="stylesheet">
-</head>
+  </head>
 <body>
-  <div id="root"></div>
-  <h1>BIENVENIDOS A CIFRADO CESAR</h1>
-  <h2>MENSAJE A CIFRAR</h2>
-  <textarea placeholder="Ingrese Texto" id='texto'></textarea></br></br>
-  <label>INGRESE LLAVE</label>
-  <textarea placeholder="Ingrese Llave" maxlength="2"  id='llave'></textarea></br></br>
-  <button type="button" id="botonE">Encriptar</button>
-  <button type="button" id="botonD">Desencriptar</button>
-  <h3>RESULTADO</h3>
-  <div id="answer">
+  <div id="inicio" class="init">
+    <h1>BIENVENIDOS A CIFRADO CESAR</h1>
+    <p><b>Cifrado Cesar</b> es una aplicacion que te permite compartir tus
+      mensajes de forma secreta utilizando códigos y que solo pueden ser leidos
+      por las personas a quienes tu compartas el mensaje con su respectiva
+      llave(un número)que permita decifrar el mensaje encriptado.</p>
+      <ul>
+        <b>Instrucciones</b><br><br>
+        <li><mark>Ingresa el mensaje que quieres compartir con una llave que servira de
+            contraseña y encripta el mensaje.</mark></li><br>
+        <li><mark>Copia el mensaje encriptado, compartelo con tus amigo dándoles la
+            llave(contraseña) que les permita descifrar el mensaje.</mark></li><br>
+        <li><mark>Indícales a tus amigos que copien el mensaje en la casilla ingresar texto,
+            luego escriban la llave, click en descifrar y listo.</mark></li><br>
+        Es de esta manera que podras compartir tus mensajes sin que las demas personas sepan
+        su contenido.
+      </ul><br><br>
+      <button type="button" id="botonS">Siguiente</button>
   </div>
-  <script src="cipher.js"></script>
-  <script src="index.js"></script>
-</body>
-</html>
+  <div id="root">
+     <h2>BIENVENIDOS A CIFRADO CESAR</h2>
+     <h3>MENSAJE A CIFRAR</h3>
+        <textarea placeholder="Ingrese Texto" id="texto"></textarea><br><br>
+        <label>INGRESE LLAVE</label>
+        <textarea placeholder="Ingrese Llave" maxlength="2"  id="llave"></textarea><br><br>
+        <button type="button" id="botonE">Encriptar</button>
+        <button type="button" id="botonD">Desencriptar</button>
+        <h4>RESULTADO</h4>
+        <textarea id="answer" ></textarea>
+      </div>
+      <script src="cipher.js"></script>
+      <script src="index.js"></script>
+  </body>
+  </html>
