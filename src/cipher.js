@@ -1,23 +1,35 @@
-const encriptar = (string, offset) => {
-  let answerE = "";
+const encrypt = (offset, string) => {
+  let answerEncrypt="";
   for (let i=0 ; i < string.length ; i++)
   {
-    let stringE = string.toUpperCase().charCodeAt(i);
-    answerE += String.fromCharCode((stringE-65+offset) % 26 +65);
+    let stringEncrypt= string.toUpperCase().charCodeAt(i);
+
+    answerEncrypt += String.fromCharCode((stringEncrypt-65+offset) % 26 +65);
   }
-  return answerE;
+  return answerEncrypt;
 }
 
-const desencriptar = (string, offset) => {
-  let answerD = "";
+const decrypt = (offset, string) => {
+  let answerDecrypt = "";
   for (let i=0 ; i < string.length ; i++)
   {
-    let stringD= string.toUpperCase().charCodeAt(i);
-    answerD += String.fromCharCode((stringD+65-offset) % 26 +65);
+    let stringDecrypt= string.toUpperCase().charCodeAt(i);
+    answerDecrypt += String.fromCharCode((stringDecrypt+65-offset) % 26 +65);
   }
-  return answerD;
+  return answerDecrypt;
 }
+
+
 window.cipher = {
-  encode : encriptar,
-  decode : desencriptar
-};
+  encode : encrypt,
+  decode : decrypt,
+}
+
+cipher.createCipherWithOffset = (offset)=>{
+  encode:(string)=>{
+    return cipher.encode(offset, string);
+  }
+  decode:(string)=>{
+    return cipher.decode(offset, string);
+  };
+}
